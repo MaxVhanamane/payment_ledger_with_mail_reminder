@@ -1,0 +1,15 @@
+import connectDb from '../../middleware/mongoose';
+import Student from '../../models/students';
+export default async function handler(req, res) {
+    connectDb()
+    if (req.method === "POST") {
+        
+            let finalRes=await Student.findByIdAndUpdate(req.body._id, req.body)
+            console.log(finalRes)
+            res.status(200).send({ success: true })
+    }
+    else {
+        res.status(400).send({success:false, error: "Not allowed" })
+    }
+
+}
