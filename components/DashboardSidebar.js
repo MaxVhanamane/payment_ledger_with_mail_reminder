@@ -49,7 +49,7 @@ export default function DashboardSidebar() {
          
           <Link href="/dashboard/addstudent">
          <li  onClick={toggleSidebar} >
-         <a  className={`cursor-pointer flex items-center p-2 ${currentPath=="/dashboard/addstudent" ? "text-violet-600" : 'text-gray-500' }  text-base font-normal  rounded-lg  hover:bg-gray-100 `}>
+         <a  className={`cursor-pointer flex items-center p-2 ${currentPath=="/dashboard/addstudent" ? "text-violet-600" : 'text-gray-500' }  text-base font-normal  rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300 `}>
             <IoIosAddCircle className="flex-shrink-0 w-6 h-6  transition duration-75   "/>
                <span className="flex-1 ml-3 whitespace-nowrap">Add students</span>
             </a>
@@ -58,7 +58,7 @@ export default function DashboardSidebar() {
     
          <Link href="/dashboard/editstudentdetails">
          <li  onClick={toggleSidebar} >
-         <a  className={`cursor-pointer flex items-center p-2 ${currentPath=="/dashboard/editstudentdetails" ? "text-violet-600" : 'text-gray-500' }  text-base font-normal  rounded-lg  hover:bg-gray-100 `}>
+         <a  className={`cursor-pointer flex items-center p-2 ${currentPath=="/dashboard/editstudentdetails" ? "text-violet-600" : 'text-gray-500' }  text-base font-normal  rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300 `}>
              
                <MdModeEdit className="flex-shrink-0 w-5 h-6  transition duration-75   "/>
                <span className="flex-1 ml-3 whitespace-nowrap">Edit student details</span>
@@ -68,7 +68,7 @@ export default function DashboardSidebar() {
       
          <Link href="/">
          <li  onClick={toggleSidebar} >
-            <a  className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
+            <a  className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300 ">
              
                <AiFillHome className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75  group-hover:text-gray-900 "/>
                <span className="flex-1 ml-3 whitespace-nowrap">Home</span>
@@ -83,7 +83,7 @@ export default function DashboardSidebar() {
                     }
                    
                   }} >
-            <p  className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 ">
+            <p  className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300">
              
                <RiLogoutCircleRLine className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75  group-hover:text-gray-900 "/>
                <span className="flex-1 ml-3 whitespace-nowrap">Logout</span>

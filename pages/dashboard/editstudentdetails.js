@@ -186,7 +186,6 @@ setStudentDetails({
   
 }
 const handleEdit=async()=>{
-  console.log(studentDetails.className)
   const data = {_id:studentDetails._id,name:studentDetails.name,email:studentDetails.email,className:studentDetails.className,totalFee:studentDetails.totalFee,totalAmountPaid:studentDetails.totalAmountPaid,phone:studentDetails.phone,lastPaymentDate:new Date(studentDetails.lastPaymentDate)};
    
 
@@ -244,16 +243,18 @@ const handleEdit=async()=>{
         <link rel="icon" href="/favicon.ico" />
       </Head>
   <DashboardSidebar/>
+
   <div className="lg:ml-60 sticky top-0 bg-violet-900 z-10">
     <div className="  p-2 font-bold md:text-3xl text-2xl  mx-auto text-center shadow  text-gray-50 bg-violet-900 drop-shadow mb-8 "><h1 className="text-center mx-auto">Edit student details</h1></div></div>
-      <main className=' flex items-center justify-center flex-col lg:ml-60 sticky top-0 bg-[#f9fafb] z-10'>
+    
+      <main className=' flex items-center flex-col lg:ml-60 sticky top-0 bg-[#f9fafb] h-screen'>
 
-        <div className="mt-4">
+        <div >
             <input type="text" placeholder="Enter the student name " className="border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2
        bg-white rounded-xl sm:p-6 sm:w-80 p-[0.5rem] lg:p-[0.5rem] w-64 sm:pl-[3rem] lg:pl-6 pl-4 md:p-[0.5rem]
        outline-none  shadow-neutral-300" onChange={handleSearch}  value={searchTerm}/></div>
 
-        <div className='flex flex-row gap-2 items-center justify-center px-1'>
+        <div className='flex flex-row gap-2 items-center justify-center px-1 mb-4'>
 
           <div className='mt-6'>
             {/* <label htmlFor="countries" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400 text-center">Select the Class</label> */}
@@ -296,11 +297,11 @@ const handleEdit=async()=>{
 
 
 
-        {data.length > 0 ? <div className="overflow-x-auto relative  w-full p-1 lg:p-4">
+        {data.length > 0 ? <div className="overflow-x-auto relative  w-full mt-4 no-scrollbar px-2">
           
        
           <table className="w-full text-sm text-left text-gray-500 ">
-            <thead className="text-xs text-gray-700 uppercase border-b border-r-0 border-collapse bg-gray-50 ">
+            <thead className="text-xs text-gray-700 uppercase border-b border-r-0 border-collapse bg-gray-50 sticky top-0 ">
               <tr >
                 <th scope="col" className="py-3 px-2 md:px-2  text-center  whitespace-nowrap ">
                   Sr No.

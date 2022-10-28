@@ -7,14 +7,7 @@ export default function Layout({children}) {
     removeToken
   } = useContext(AuthContext);
 
-  useEffect(()=>{
-    let token = localStorage.getItem("token");
-    let role = localStorage.getItem("role");
-    if(!token && !role && router.pathname!="/login"  && router.pathname!="/forgotpassword"){
-      router.push("/login")
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[router.query])
+
   useEffect(()=>{
     let token = localStorage.getItem("token");
     const data = {token};
@@ -49,6 +42,16 @@ router.push("/login")
 
    
    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[router.query])
+
+
+  useEffect(()=>{
+    let token = localStorage.getItem("token");
+    let role = localStorage.getItem("role");
+    if(!token && !role && router.pathname!="/login"  && router.pathname!="/forgotpassword"){
+      router.push("/login")
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   },[router.query])
     return (
       <div className="h-screen relative">

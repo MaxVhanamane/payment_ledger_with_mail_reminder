@@ -80,7 +80,7 @@ const handleChange=(e)=>{
      
 
     const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addstudent`, {
-      method: 'POST', // or 'PUT'
+      method: 'POST', 
       headers: {
         'Content-Type': 'application/json',
       },
@@ -147,8 +147,8 @@ const handleChange=(e)=>{
         <h1 className="text-center md:text-xl text-lg mb-3 text-gray-700 font-semibold">Student Information</h1>
 
       <div className="form-group mb-6">
-        <label htmlFor="name"  className="formLabel inline-block mb-2 text-gray-700">* Name</label>
-        <input onChange={handleChange} value={studentDetails.name} name="name" type="text" className="form-control
+        <label htmlFor="name"  className=" inline-block mb-2 text-gray-700">* Name</label>
+        <input onChange={handleChange} value={studentDetails.name} name="name" type="text" className="
           block
           w-full
           px-3
@@ -168,8 +168,8 @@ const handleChange=(e)=>{
       
      
       <div className="form-group mb-6">
-        <label htmlFor="email"  className="formLabel inline-block mb-2 text-gray-700">* Email</label>
-        <input onChange={handleChange} value={studentDetails.email} name="email" type="email" className="form-control
+        <label htmlFor="email"  className=" inline-block mb-2 text-gray-700">* Email</label>
+        <input onChange={handleChange} value={studentDetails.email} name="email" type="email" className="
           block
           w-full
           px-3
@@ -188,8 +188,8 @@ const handleChange=(e)=>{
       </div>
 
       <div className="form-group mb-6">
-        <label htmlFor="phone"  className="formLabel inline-block mb-2 text-gray-700">* Phone</label>
-        <input onChange={handleChange} value={studentDetails.phone} name="phone" type="number" className="form-control
+        <label htmlFor="phone"  className=" inline-block mb-2 text-gray-700">* Phone</label>
+        <input onChange={handleChange} value={studentDetails.phone} name="phone" type="number" className="
           block
           w-full
           px-3
@@ -209,8 +209,8 @@ const handleChange=(e)=>{
       
      
       <div className="form-group mb-6">
-        <label htmlFor="classname"  className="formLabel inline-block mb-2 text-gray-700">* Class Name</label>
-        <input onChange={handleChange} value={studentDetails.className} name="className" type="number" className="form-control
+        <label htmlFor="classname"  className=" inline-block mb-2 text-gray-700">* Class Name</label>
+        <input onChange={handleChange} value={studentDetails.className} name="className" type="number" className="
           block
           w-full
           px-3
@@ -230,8 +230,8 @@ const handleChange=(e)=>{
       
      
       <div className="form-group mb-6">
-        <label htmlFor="totalFee"  className="formLabel inline-block mb-2 text-gray-700">* Total Fee</label>
-        <input onChange={handleChange} value={studentDetails.totalFee} name="totalFee" type="number" className="form-control
+        <label htmlFor="totalFee"  className=" inline-block mb-2 text-gray-700">* Total Fee</label>
+        <input onChange={handleChange} value={studentDetails.totalFee} name="totalFee" type="number" className="
           block
           w-full
           px-3
@@ -252,8 +252,8 @@ const handleChange=(e)=>{
    
     
       <div className="form-group mb-6">
-        <label htmlFor="totalAmountPaid"  className="formLabel inline-block mb-2 text-gray-700">* Total amount paid</label>
-        <input onChange={handleChange} value={studentDetails.totalAmountPaid} name="totalAmountPaid" type="number" className="form-control
+        <label htmlFor="totalAmountPaid"  className=" inline-block mb-2 text-gray-700">* Total amount paid</label>
+        <input onChange={handleChange} value={studentDetails.totalAmountPaid} name="totalAmountPaid" type="number" className="
           block
           w-full
           px-3
@@ -267,7 +267,7 @@ const handleChange=(e)=>{
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="totalAmountPaid"
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none " id="totalAmountPaid"
           placeholder="Total amount paid"/>
       </div>
       
@@ -276,8 +276,8 @@ const handleChange=(e)=>{
      
      
       <div className="form-group mb-6">
-        <label htmlFor="lastPaymentDate"  className="formLabel inline-block mb-2 text-gray-700">* Payment Date</label>
-        <input onChange={handleChange} value={studentDetails.lastPaymentDate} name="lastPaymentDate" type="date" className="form-control
+        <label htmlFor="lastPaymentDate"  className=" inline-block mb-2 text-gray-700">* Payment Date <span className="text-xs text-gray-700">(MM/DD/YYYY)</span></label>
+        <input onChange={handleChange} value={studentDetails.lastPaymentDate} name="lastPaymentDate" type="date" className="
           block
           w-full
           px-3

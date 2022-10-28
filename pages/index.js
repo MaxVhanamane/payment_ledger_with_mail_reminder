@@ -97,6 +97,8 @@ useEffect(()=>{
             <meta name="description" content="Student attendance" />
             <link rel="icon" href="/favicon.ico" />
           </Head>
+
+          
           <main className=' flex items-center  flex-col  bg-[#f9fafb] z-10 h-screen'>
             <h1 className="w-full  text-center py-1 text-white font-bold text-lg bg-violet-900">Student list </h1>
          <div className="mt-4">
@@ -106,7 +108,7 @@ useEffect(()=>{
     
        
     
-            <div className='flex flex-row gap-2 items-center justify-center px-1'>
+            <div className='flex flex-row gap-2 items-center justify-center px-1 mb-4'>
     
               <div className='mt-6'>
             
@@ -149,10 +151,10 @@ useEffect(()=>{
     
     
     
-            {data.length > 0 ? <div className="overflow-x-auto relative  w-full p-1 lg:p-4">
+            {data.length > 0 ? <div className="overflow-x-auto relative  w-full mt-4 no-scrollbar px-2 ">
               
-              <table className="w-full text-sm text-left text-gray-500  mt-4">
-                <thead className="text-xs text-gray-700 uppercase border-b border-r-0 border-collapse bg-gray-50 ">
+              <table className="w-full text-sm text-left text-gray-500  ">
+                <thead className="text-xs text-gray-700 uppercase border-b border-r-0 border-collapse bg-gray-50 sticky top-0">
                   <tr >
                     <th scope="col" className="py-3 px-2 md:px-2  text-center  whitespace-nowrap ">
                       Sr No.
