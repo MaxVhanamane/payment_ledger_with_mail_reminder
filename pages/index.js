@@ -151,7 +151,7 @@ useEffect(()=>{
     
     
     
-            {data.length > 0 ? <div className="overflow-x-auto relative  w-full mt-4 no-scrollbar px-2 ">
+            {data.length > 0 ? <div className="overflow-x-auto relative  w-full mt-4 no-scrollbar px-2  mb-28">
               
               <table className="w-full text-sm text-left text-gray-500  ">
                 <thead className="text-xs text-gray-700 uppercase border-b border-r-0 border-collapse bg-gray-50 sticky top-0">
@@ -246,17 +246,9 @@ useEffect(()=>{
               </table>
             </div> : <div className="flex justify-center items-center font-semibold my-20 md:p-10 p-8 text-violet-900">
               {selectClass && searchTerm ?<p>No Student records found!</p>:<p className="text-center">For student details, select the class name or use the search bar.</p> }</div>}
-    
-    
-    
-    
-            
-    
-    
-    
+
           </main>
-    
-    
+
         </div>
 
 

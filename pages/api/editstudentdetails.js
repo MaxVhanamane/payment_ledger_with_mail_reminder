@@ -5,7 +5,6 @@ export default async function handler(req, res) {
     if (req.method === "POST") {
         
             let finalRes=await Student.findByIdAndUpdate(req.body._id, req.body)
-            console.log(finalRes)
             res.status(200).send({ success: true })
     }
     else {

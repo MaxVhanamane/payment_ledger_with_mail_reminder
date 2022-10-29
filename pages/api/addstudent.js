@@ -25,7 +25,6 @@ export default async function handler(req, res) {
                 Object.keys(error.errors).forEach((key) => {
                   errors[key] = error.errors[key].message;
                 });
-                console.log("yew ala ", errors)
           
                 return res.status(400).json({ success: false,error:errors });
               }
