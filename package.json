@@ -1,5 +1,5 @@
 {
-  "name": "payment-record",
+  "name": "payment-ledger-with-mail-reminder",
   "version": "0.1.0",
   "private": true,
   "scripts": {
