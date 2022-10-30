@@ -47,18 +47,29 @@ useEffect(()=>{
   const handleSelectBasedSearch = async () => {
 
 
-    let data = { className: selectClass}
-    let response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getstudents`, {
-      method: 'POST', // or 'PUT'
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
+    // let data = { className: selectClass}
+    // let response = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/getstudents`, {
+    //   method: 'POST', // or 'PUT'
+    //   headers: {
+    //     'Content-Type': 'application/json',
+    //   },
+    //   body: JSON.stringify(data),
+    // })
+
+    // let foundStudents = await response.json()
+    // setData(foundStudents.students)
+
+    
+    const filterData = classNameData.filter(function (val) {
+      if (val.className.includes(selectClass) ) {
+        return val
+      }
+      // you have to add else statement else it will give warning in console that filter is not returning anything.
+      else {
+        return null
+      }
     })
-
-    let foundStudents = await response.json()
-    setData(foundStudents.students)
-
+    setData(filterData)
 
 
   }
