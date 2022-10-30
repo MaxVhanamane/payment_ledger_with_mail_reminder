@@ -66,7 +66,7 @@ export default function Login() {
         <title>ज्ञानपीठ - Login</title>
         <meta name="description" content="ज्ञानपीठ login page" />
       </Head>
-      <section className="h-screen gradient-form bg-gray-200 md:h-screen">
+      <section className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full bg-gray-200 ">
         <div className=" py-12 px-6 h-full">
           <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
             <div className="xl:w-6/12">
@@ -75,8 +75,8 @@ export default function Login() {
                   <div className=" px-4 md:px-0">
                     <div className="md:p-12 md:mx-6">
                       <div className="text-center rounded-full">
-                        <h4 className="text-2xl font-bold mt-1 mb-5 pb-1  text-gray-700">
-                          Log in to your account
+                        <h4 className="text-2xl font-bold mt-1 mb-5 pb-1  text-gray-600">
+                          Login 
                         </h4>
                       </div>
                       <form onSubmit={handleLogin}>

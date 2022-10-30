@@ -48,7 +48,7 @@ export default function DashboardSidebar() {
           </div>
           <div className="flex-shrink-0 flex ">
             <span className="block w-auto line-height leading-8 text-white px-2 rounded-xl bg-violet-900 font-bold text-xl">
-              ज्ञानपीठ{" "}
+              ज्ञानपीठ
             </span>
           </div>
           <ul className="space-y-2 mt-8">
@@ -88,8 +88,8 @@ export default function DashboardSidebar() {
 
             <Link href="/">
               <li onClick={toggleSidebar}>
-                <a className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300 ">
-                  <AiFillHome className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75  group-hover:text-gray-900 " />
+                <a className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-500 rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300 ">
+                  <AiFillHome className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75  \ " />
                   <span className="flex-1 ml-3 whitespace-nowrap">Home</span>
                 </a>
               </li>
@@ -102,8 +102,8 @@ export default function DashboardSidebar() {
                 }
               }}
             >
-              <p className=" cursor-pointer flex items-center p-2 text-base font-normal text-gray-900 rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300">
-                <RiLogoutCircleRLine className="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75  group-hover:text-gray-900 " />
+              <p className=" cursor-pointer flex items-center p-2 text-base font-normal text-red-500 rounded-lg  hover:bg-gray-100 transition ease-out  hover:-translate-y-1 hover:scale-105 duration-300">
+                <RiLogoutCircleRLine className="flex-shrink-0 w-6 h-6 text-red-500 transition duration-75  " />
                 <span className="flex-1 ml-3 whitespace-nowrap">Logout</span>
               </p>
             </li>
