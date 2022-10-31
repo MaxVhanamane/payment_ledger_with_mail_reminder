@@ -11,6 +11,7 @@ function AuthState(props) {
   const [token, setToken] = useState(null);
   const [role, setRole] = useState(null);
   const router = useRouter();
+  const [authorised, setAuthorised] = useState(false)
 
   useEffect(() => {
     let tokenValue = localStorage.getItem("token");
@@ -39,7 +40,7 @@ function AuthState(props) {
   };
 
   return (
-    <AuthContext.Provider value={{ token, role, removeToken }}>
+    <AuthContext.Provider value={{ token, role, removeToken ,authorised, setAuthorised}}>
       {/* Provider will give access to all the above states and functions to the components which are in props.children */}
       {props.children}
     </AuthContext.Provider>

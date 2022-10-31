@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import Head from "next/head";
 import DashboardSidebar from "../../components/DashboardSidebar";
+import { AuthContext } from './../../context/AuthState';
+
 import { toast } from "react-toastify";
 
 export default function AddStudent() {
@@ -13,6 +15,9 @@ export default function AddStudent() {
     totalAmountPaid: "",
     lastPaymentDate: "",
   });
+  const {
+    authorised
+  } = useContext(AuthContext);
 
   const handleChange = (e) => {
     if (e.target.name === "name") {
@@ -118,6 +123,7 @@ export default function AddStudent() {
         <title>Dashboard - Add Students</title>
         <meta name="description" content="Add a food item" />
       </Head>
+      {authorised&&<>
       <DashboardSidebar />
 
       <div className="lg:ml-60 sticky top-0 bg-violet-900 z-10">
@@ -381,6 +387,7 @@ export default function AddStudent() {
           </p>
         </div>
       </div>
+      </>}
     </>
   );
 }

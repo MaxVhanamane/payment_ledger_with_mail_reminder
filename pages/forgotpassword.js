@@ -156,7 +156,7 @@ export default function Forgotpassword() {
 
 
   return (
-    <section className="h-screen gradient-form bg-gray-200 md:h-screen">
+    <section className="absolute top-1/2 left-1/2  transform -translate-x-1/2 -translate-y-1/2 h-full w-full bg-gray-200">
       <div className=" py-12 px-6 h-full">
         <div className="flex justify-center items-center flex-wrap h-full g-6 text-gray-800">
           <div className="xl:w-6/12">
@@ -166,7 +166,7 @@ export default function Forgotpassword() {
                   <div className="md:p-12 md:mx-6">
                     <div className="text-center rounded-full">
 
-                      <h4 className="text-2xl font-bold mt-1 mb-5 pb-1">Forgot Password</h4>
+                      <h4 className="text-lg md:text-2xl text-gray-700 font-bold mt-1 mb-5 pb-1">Enter your mail</h4>
 
                     </div>
                     {/* If user has a token in his url it means he is visiting this page using the link that we sent him in a mail.

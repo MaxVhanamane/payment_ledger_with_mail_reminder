@@ -1,12 +1,15 @@
 import Head from 'next/head'
-import { useState, useEffect } from 'react'
+import { useState, useEffect,useContext } from 'react'
 import Student from './../models/students';
 import connectDb from './../middleware/mongoose';
 import { toast } from 'react-toastify';
-
+import { AuthContext } from './../context/AuthState';
 export default function Home({allStudents}) {
-
+  const {
+    authorised
+  } = useContext(AuthContext);
   const [data, setData] = useState([])
+
   const [classNameData, setclassNameData] = useState(allStudents)
 
   let classNm = classNameData.map((cl) => { return cl.className })
@@ -110,7 +113,7 @@ useEffect(()=>{
           </Head>
 
           
-          <main className=' flex items-center  flex-col  bg-[#f9fafb] z-10 h-screen'>
+          {authorised&&<main className=' flex items-center  flex-col  bg-[#f9fafb] z-10 h-screen'>
             <h1 className="w-full  text-center py-1 text-white font-bold text-lg bg-violet-900">Student list </h1>
          <div className="mt-4">
             <input type="text" placeholder="Enter the student name " className="border-none ring-2 ring-gray-300 focus:ring-gray-500 focus:ring-2
@@ -258,7 +261,7 @@ useEffect(()=>{
             </div> : <div className="flex justify-center items-center font-semibold my-20 md:p-10 p-8 text-violet-900">
               {selectClass && searchTerm ?<p>No Student records found!</p>:<p className="text-center">For student details, select the class name or use the search bar.</p> }</div>}
 
-          </main>
+          </main>}
 
         </div>
 

@@ -1,13 +1,18 @@
 import Head from "next/head";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { toast } from "react-toastify";
 import DashboardSidebar from "../../components/DashboardSidebar";
+import { AuthContext } from './../../context/AuthState';
+
 export default function EditStudentDetails() {
   const [data, setData] = useState([]);
   const [serverSideData, setserverSideData] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [selectClass, setSelectClass] = useState();
   const [searchTerm, setSearchTerm] = useState("");
+  const {
+    authorised
+  } = useContext(AuthContext);
 
   let classNm = serverSideData.map((cl) => {
     return cl.className;
@@ -205,8 +210,7 @@ export default function EditStudentDetails() {
 
   return (
     <>
-      <div>
-        <style jsx global>{`
+      <style jsx global>{`
           footer {
             display: none;
           }
@@ -214,11 +218,14 @@ export default function EditStudentDetails() {
             display: none;
           }
         `}</style>
+      {authorised&&<div>
+      
         <Head>
           <title>ज्ञानपीठ- Edit student details</title>
           <meta name="description" content="Student attendance" />
           <link rel="icon" href="/favicon.ico" />
         </Head>
+        
         <DashboardSidebar />
 
         <div className="lg:ml-60 sticky top-0 bg-violet-900 z-10">
@@ -451,7 +458,7 @@ export default function EditStudentDetails() {
             </div>
           )}
         </main>
-      </div>
+      </div>}
       {showModal && (
         <div className="lg:ml-60 bg-gray-100 h-fit absolute inset-0 flex items-center justify-center z-[120] ">
           <div className="bg-violet-900 mt-12  rounded-lg mb-10">

@@ -4,8 +4,10 @@ import { AuthContext } from './../context/AuthState';
 export default function Layout({children}) {
   const router= useRouter()
   const {
-    removeToken
+    removeToken,
+     setAuthorised
   } = useContext(AuthContext);
+ 
 
 
   useEffect(()=>{
@@ -26,9 +28,14 @@ export default function Layout({children}) {
 
   if(!response.success){
   removeToken();
+  setAuthorised(false)
 router.push("/login")
 
    alert("Token expired : \n please login again to refresh your token.")
+  }
+  else{
+  setAuthorised(true)
+
   }
  
 
@@ -49,8 +56,14 @@ router.push("/login")
     let token = localStorage.getItem("token");
     let role = localStorage.getItem("role");
     if(!token && !role && router.pathname!="/login"  && router.pathname!="/forgotpassword"){
+      setAuthorised(false)
       router.push("/login")
     }
+    else{
+      setAuthorised(true)
+
+    }
+   
     // eslint-disable-next-line react-hooks/exhaustive-deps
   },[router.query])
     return (
