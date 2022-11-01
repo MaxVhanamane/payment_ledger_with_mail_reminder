@@ -1,6 +1,8 @@
 import {useContext,useEffect} from "react";
 import {useRouter} from "next/router"
 import { AuthContext } from './../context/AuthState';
+import Footer from './../components/Footer';
+
 export default function Layout({children}) {
   const router= useRouter()
   const {
@@ -70,7 +72,8 @@ router.push("/login")
       <div className="h-screen relative">
 
         {children}
-       
+        <Footer/>
+
       </div>
     )
   }

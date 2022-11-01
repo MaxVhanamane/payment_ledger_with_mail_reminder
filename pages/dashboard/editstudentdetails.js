@@ -197,7 +197,7 @@ export default function EditStudentDetails() {
 
       handleSelectBasedSearch();
     } else {
-      toast.success("Some error occured, please try again later!", {
+      toast.error("Some error occured, please try again later!", {
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
@@ -211,10 +211,10 @@ export default function EditStudentDetails() {
   return (
     <>
       <style jsx global>{`
-          footer {
+          #footer {
             display: none;
           }
-          nav {
+          #nav {
             display: none;
           }
         `}</style>

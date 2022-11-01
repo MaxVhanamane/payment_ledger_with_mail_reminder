@@ -112,7 +112,7 @@ export default function AddStudent() {
   return (
     <>
       <style jsx global>{`
-        footer {
+        #footer {
           display: none;
         }
         #nav {
