@@ -22,8 +22,8 @@ export default function Navbar() {
             </span>
             {/* <img src="/dnyanpeeth_classA.jpg" alt="" /> */}
           </Link>
-
-          <div className="absolute inset-x-0 left-0 flex items-center sm:hidden">
+           {/* If user is on login or forgotpassword page we will not show hamburger icon and navbar options  */}
+          {(router.pathname != "/login" && router.pathname != "/forgotpassword")&&<div className="absolute inset-x-0 left-0 flex items-center sm:hidden">
             {/* <!-- Mobile menu button--> */}
             <button
               onClick={() => {
@@ -77,10 +77,10 @@ export default function Navbar() {
                 </svg>
               )}
             </button>
-          </div>
+          </div>}
         </div>
 
-        {router.pathname != "/login" && (
+        {(router.pathname != "/login" && router.pathname != "/forgotpassword") && (
           <div className="hidden md:flex items-center justify-center sm:block sm:ml-6">
             <div className=" space-x-4 ">
               <Link href="/">
@@ -123,7 +123,7 @@ export default function Navbar() {
       </div>
 
       {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-      {showToggler && router.pathname != "/login" && (
+      {(showToggler &&router.pathname != "/login" && router.pathname != "/forgotpassword") &&(
         <div
           className="sm:hidden absolute left-0 bg-gray-100 w-full"
           id="mobile-menu"
