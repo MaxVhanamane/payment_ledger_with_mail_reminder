@@ -44,7 +44,7 @@ export default async function handler(req, res) {
 
     <br/><br/>
 
-    We recommend that you keep your password secure and not share it with anyone.If you feel your password has been compromised, you can change it by going to your My Account Page.
+    We recommend that you keep your password secure and not share it with anyone.
 
     <br/><br/>
     The above link will expire in 10 minutes.
